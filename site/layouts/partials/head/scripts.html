@@ -25,3 +25,14 @@
 <script type='text/javascript' src="/js/{{ index . "vendor/swiper/swiper.js" }}"></script>
 <script type='text/javascript' src="/js/{{ index . "vendor/isotope/isotope.min.js" }}"></script>
 {{ end }}
+<script>
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                });
+            }
+        });
+    }
+</script>
