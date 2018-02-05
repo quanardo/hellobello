@@ -9,10 +9,3 @@
   base    = "site"
   publish = "public"
   command = "gulp build"
-
-# Production context: All deploys to the main
-# repository branch will inherit these settings.
-[context.production]
-  command = "make production"
-  [context.production.environment]
-    ACCESS_TOKEN = "e206ea3c-0d28-4e26-aabf-5e0b61d5825b"
