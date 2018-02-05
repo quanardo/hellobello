@@ -1,0 +1,23 @@
+{
+  "name": "lunchwork",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [],
+  "license": "ISC",
+  "keywords": [],
+  "homepage": "lunchwork.com",
+  "private": "true",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "resolutions": {
+    "jquery": "^3.1.1"
+  }
+}

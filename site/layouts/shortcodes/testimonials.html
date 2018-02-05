@@ -1,0 +1,32 @@
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" }}
+<div data-sc-full-width="true" data-sc-full-width-init="false" class="sc_row row sc_row-fluid sc_custom_1459501367721 inverse_colors">
+    <div class="column sc_column_container sc_col-sm-12">
+        <div class="sc_column-inner ">
+            <div class="wrapper">
+                <div class="sc_empty_space em_height_6">
+                    <span class="sc_empty_space_inner"></span>
+                </div>
+                <div id="sc_testimonials_179" class="sc_testimonials sc_testimonials_style_testimonials-1 cu_fullwidth">
+                    <h6 class="sc_testimonials_subtitle sc_item_subtitle">{{ $title }}</h6>
+                    <h2 class="sc_testimonials_title sc_item_title">{{ $subtitle }}</h2>
+                    <div class="sc_slider_swiper swiper-slider-container sc_slider_nopagination sc_slider_controls sc_slider_controls_side" data-interval="6815"
+                        data-slides-min-width="250">
+                        <div class="slides swiper-wrapper">
+                            {{ .Inner }}
+                        </div>
+                        <div class="sc_slider_controls_wrap">
+                            <a class="sc_slider_prev" href="#"></a>
+                            <a class="sc_slider_next" href="#"></a>
+                        </div>
+                        <div class="sc_slider_pagination_wrap"></div>
+                    </div>
+                </div>
+                <div class="sc_empty_space em_height_8">
+                    <span class="sc_empty_space_inner"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sc_row-full-width"></div>

@@ -1,0 +1,18 @@
+{{ $price := .Get "price" }}
+{{ $title := .Get "title" }}
+<div class="column-1_2 column_padding_bottom">
+    <div id="sc_menuitems_item" class="sc_menuitems_item" data-url="menu-item-1.html">
+        <div class="sc_menuitem_image">
+            <a class="show_popup_menuitem" href="#">
+                <img alt="" src="/img/{{ with $.Site.Data.assets }}{{ index . "370x370.jpg" }}{{ end }}">
+            </a>
+        </div>
+        <div class="sc_menuitem_price">${{ $price }}</div>
+        <h5 class="sc_menuitem_title">
+            <a class="show_popup_menuitem" href="#">{{ $title }}</a>
+        </h5>
+        <div class="sc_menuitem_description">
+            <p>{{ .Inner }}</p>
+        </div>
+    </div>
+</div>

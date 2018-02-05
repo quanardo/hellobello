@@ -1,0 +1,46 @@
+<div data-sc-full-width="true" data-sc-full-width-init="false" data-sc-stretch-content="true" class="sc_row row sc_row-fluid sc_row-no-padding">
+    <div class="column sc_column_container sc_col-sm-12">
+        <div class="sc_column-inner ">
+            <div class="wrapper">
+                <article class="myportfolio-container minimal-light" id="esg-grid-2-1-wrap">
+                    <div id="esg-grid-2-1" class="esg-grid">
+                        <ul>
+                            {{ $paginator := (where .Site.Pages "Section" "in" "services") }}
+                            {{ range after 2 $paginator }}
+                                {{ $img := string .Params.img }}
+                                {{ $title := .Params.title }}
+                                {{ $category := .Params.category }}
+                                <li class="filterall filter-blogger eg-roosevelt-massage-wrapper eg-post-id-187" data-date="1459254645">
+                                    <div class="esg-media-cover-wrapper">
+                                        <div class="esg-entry-media esg-shifttotop" data-delay="0">
+                                            <img src="/img/{{ with $.Site.Data.assets }}{{ index . $img }}{{ end }}" alt="">
+                                        </div>
+                                        <div class="esg-entry-cover">
+                                            <div class="esg-overlay esg-fade eg-roosevelt-massage-container" data-delay="0"></div>
+                                            <div class="esg-bottom eg-post-187 eg-roosevelt-massage-element-0 esg-flipup" data-delay="0.09">{{ $title }}</div>
+                                            <div class="esg-center eg-post-187 eg-roosevelt-massage-element-2-a esg-slideup" data-delay="0.2">
+                                                <a class="eg-roosevelt-massage-element-2 eg-post-187 esgbox" href="/img/{{ with $.Site.Data.assets }}{{ index . $img }}{{ end }}" lgtitle="{{ $title }}">
+                                                    <i class="eg-icon-search"></i>
+                                                </a>
+                                            </div>
+                                            <div class="esg-bottom eg-post-187 eg-roosevelt-massage-element-4-a esg-flipdown" data-delay="0.46">
+                                                <a class="eg-roosevelt-massage-element-4 eg-post-187" href="classic.html" title="View all posts in Blogger" rel="category tag">{{ $category }}</a>
+                                            </div>
+                                            <div class="esg-center eg-post-187 eg-roosevelt-massage-element-1-a esg-slideup" data-delay="0.3">
+                                                <a class="eg-roosevelt-massage-element-1 eg-post-187" href="{{ .RelPermalink }}" target="_self">
+                                                    <i class="eg-icon-link"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </article>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sc_row-full-width"></div>

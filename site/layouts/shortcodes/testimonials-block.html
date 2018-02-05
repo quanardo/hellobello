@@ -1,0 +1,15 @@
+{{ $img := .Get "src" }}
+{{ $name := .Get "name" }}
+<div class="swiper-slide" data-style="width:100%;">
+    <div id="sc_testimonials_179_1" class="sc_testimonial_item">
+        <div class="sc_testimonial_content">
+            <p>{{ .Inner }}</p>
+        </div>
+        <div class="sc_testimonial_avatar">
+            <img alt="Letitia Shelton" src="/img/{{ with $.Site.Data.assets }}{{ index . $img }}{{ end }}">
+        </div>
+        <div class="sc_testimonial_author">
+            <a href="#" class="sc_testimonial_author_name">{{ $name }}</a>
+        </div>
+    </div>
+</div>

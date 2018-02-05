@@ -1,0 +1,19 @@
+{{ $img := .Get "src" }}
+{{ $name := .Get "name" }}
+{{ $post := .Get "post" }}
+<div class="column-1_4 column_padding_bottom">
+    <div id="sc_team_630_1" class="sc_team_item">
+        <div class="sc_team_item_avatar">
+            <img alt="" src="/img/{{ with $.Site.Data.assets }}{{ index . $img }}{{ end }}">
+            <div class="sc_team_item_hover">
+                <a href="single-team.html" class="sc_team_item_icon icon-email19">{{ $name }}</a>
+            </div>
+        </div>
+        <div class="sc_team_item_info">
+            <h5 class="sc_team_item_title">
+                <a href="single-team.html"></a>
+            </h5>
+            <div class="sc_team_item_position">{{ $post }}</div>
+        </div>
+    </div>
+</div>

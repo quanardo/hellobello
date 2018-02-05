@@ -1,0 +1,7 @@
+site/public/*
+node_modules/*
+bower_components/*
+site/static/*
+site/data/assets.json
+dist/*
+hugo/hugo_*.exe

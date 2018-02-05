@@ -1,0 +1,72 @@
+baseurl = "/"
+DefaultContentLanguage = "ru"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = "UA-106758542-1"
+
+# Define the number of posts per page
+paginate = 4
+footnotereturnlinkcontents = "↩"
+
+[Taxonomies]
+    tag = "tags"
+    category = "categories"
+
+[Params]
+    keywords = "site-keywords"
+    author = ""
+    images = [""]
+
+#   "boxed" or "fullscreen"
+    type = "fullscreen"
+#   "default", "youtube", "mozaic" or "constellation"
+    overlay = "youtube"
+#   "text" or "countdown"
+    textOrCountdown = "text"
+
+[Languages]
+[Languages.ru]
+    title = "HELLO BELLO — Китайский оздоровительный центр."
+    description = "Первоклассные специалисты из Китая, гарантированный индивидуальный подход и комфорт для наших пациентов. Иглотерапия, мануальная терапия, различные виды массажа, прогревание полынными сигарами, фитотерапия."
+    languageName = "Russian"
+    languageCode = "ru"
+
+[Languages.lv]
+    title = "HELLO BELLO — Ķīnas veselības centrs."
+    description = "Augstas klases speciālisti no Ķīnas, garantēta individuālā pieeja un komforts mūsu pacientiem. Adatu terapija, manuālā terapija, dažādu veidu masāžas, sildīšana ar vērmeļu cigāriem, fitoterapija."
+    languageName = "Latvian"
+    languageCode = "lv"
+
+[Social]
+# Add your social network accounts to the profile section on the left
+# by entering your username. The links to your account will be
+# created automatically.
+#   linkedin        = "#"
+#   github          = "#"
+#   stackoverflow   = "#"
+    facebook        = "//facebook.com/hellobello.lv"
+#   twitter         = "#"
+#   googleplus      = "#"
+#   instagram       = "#"
+#   gitlab          = "#"
+#   bitbucket       = "#"
+#   jsfiddle        = "#"
+#   codepen         = "#"
+#   foursquare      = "#"
+#   dribbble        = "#"
+#   deviantart      = "#"
+#   behance         = "#"
+#   flickr          = "#"
+#   youtube         = "#"
+#   vimeo           = "#"
+#   vine            = "#"
+#   medium          = "#"
+#   wordpress       = "#"
+#   tumblr          = "#"
+#   xing            = "#"
+#   slideshare      = "#"
+#   reddit          = "#"
+#   pinterest       = "#"
+#   facebook_admin  = "#"
+#   twitter_domain  = "#"
