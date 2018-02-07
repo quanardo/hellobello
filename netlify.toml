@@ -7,8 +7,5 @@
 
 [build]
   base    = "site"
-  
-# global context
-[build]
   publish = "dist"
   command = "gulp build"
