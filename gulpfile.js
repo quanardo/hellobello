@@ -149,7 +149,7 @@ gulp.task('build', ['hugo']);
 gulp.task('build-preview', ['hugo-preview']);
 gulp.task('release', gTasks.sync(['hugo-prod', 'html']));
 
-gulp.task('deploy', ['release'], (cb) => deployToNetlify(cb));
+gulp.task('deploy', ['release']);
 // Simple task to revision and copy site images to destination directory
 gulp.task('images', ['json'], () => {
   return gulp.src([
