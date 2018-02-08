@@ -4,7 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "gulp build"
   },
   "repository": {
     "type": "",
@@ -37,6 +38,7 @@
     "yargs": "^6.5.0"
   },
   "dependencies": {
-    "gulp-cssimport": "^6.0.0"
+    "gulp-cssimport": "^6.0.0",
+    "hugo-bin": "^0.22.0"
   }
 }
