@@ -98,22 +98,23 @@ var correctCssUrls = (img, fonts, urlToCorrect) => {
 };
 // Method to build site with Hugo
 var buildSite = (cb, options) => {
+  cp.exec('hugo_0.19');
   // Fetching arguments to pass to Hugo
-  const args = options ? defaultArgs.concat(options) : defaultArgs;
+  // const args = options ? defaultArgs.concat(options) : defaultArgs;
   // Starting hugo.exe
-  return cp.spawn(hugoBin, args, { stdio: 'inherit' }).on('close', (code) => {
-    if (code === 0) {
+  // return cp.spawn(hugoBin, args, { stdio: 'inherit' }).on('close', (code) => {
+  //   if (code === 0) {
       // On success reloading website if it is running
-      browserSync.reload();
+      // browserSync.reload();
       // Docs for cb() https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md
-      cb();
-    }
-    else {
-      browserSync.notify('Hugo build failed :(');
-      cb('Hugo build failed');
-    }
-  });
-}
+//       cb();
+//     }
+//     else {
+//       browserSync.notify('Hugo build failed :(');
+//       cb('Hugo build failed');
+//     }
+//   });
+// }
 
 var deployToNetlify = (cb, options) => {
   // const args = options ? netlifyArgs.concat(options) : netlifyArgs;
