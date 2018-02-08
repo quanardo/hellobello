@@ -34,7 +34,7 @@ gulp.paths.img = path.join(gulp.paths.dest, 'img');
 gulp.paths.font = path.join(gulp.paths.dest, 'fonts');
 
 // Hugo config
-const hugoBin = 'hugo/hugo.exe';
+const hugoBin = './hugo/hugo.exe';
 const defaultArgs = ['--destination', gulp.paths.dist, '-s', 'site', '-v'];
 // Netlify config
 const netlify = 'netlify';
