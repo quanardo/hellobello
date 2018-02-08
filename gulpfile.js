@@ -97,23 +97,25 @@ var correctCssUrls = (img, fonts, urlToCorrect) => {
   return img + fileName;
 };
 // Method to build site with Hugo
-var buildSite = (cb, options) => {
-  cp.exec('hugo_0.19');
+var buildSite = (cb, options, environment = "development") => {
   // Fetching arguments to pass to Hugo
-  // const args = options ? defaultArgs.concat(options) : defaultArgs;
+  const args = options ? defaultArgs.concat(options) : defaultArgs;
+
+  process.env.NODE_ENV = environment;
+
   // Starting hugo.exe
-  // return cp.spawn(hugoBin, args, { stdio: 'inherit' }).on('close', (code) => {
-  //   if (code === 0) {
+  return cp.spawn(hugoBin, args, { stdio: 'inherit' }).on('close', (code) => {
+    if (code === 0) {
       // On success reloading website if it is running
-      // browserSync.reload();
+      browserSync.reload();
       // Docs for cb() https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-tasks-in-series.md
-//       cb();
-//     }
-//     else {
-//       browserSync.notify('Hugo build failed :(');
-//       cb('Hugo build failed');
-//     }
-//   });
+      cb();
+    }
+    else {
+      browserSync.notify('Hugo build failed :(');
+      cb('Hugo build failed');
+    }
+  });
 }
 
 var deployToNetlify = (cb, options) => {
@@ -137,7 +139,8 @@ var deployToNetlify = (cb, options) => {
 gulp.task('hugo', ['assets'], (cb) => buildSite(cb));
 gulp.task('hugo-preview', gTasks.sync(['dev', 'assets']), (cb) => buildSite(cb, ['--buildDrafts', '--buildFuture']));
 // Hugo build with production configuration
-gulp.task('hugo-prod', ['assets'], (cb) => buildSite(cb, ['--config', path.join(__dirname, 'site/config.prod.toml')]));
+gulp.task('hugo-prod', ['assets'], (cb) => buildSite(cb, [], 'production'));
+// '--config', path.join(__dirname, 'site/config.prod.toml')
 // There are a lot task for building assets, but here I'm specifying only one (vendor-css),
 // because they are executed sequentially (each of them depend on another one by one). 
 // This is necessary due to revision manifest file.
