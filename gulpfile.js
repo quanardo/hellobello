@@ -275,4 +275,4 @@ gulp.task('server', ['hugo-preview'], () => {
   });
 });
 // Task to set environment to development
-gulp.task('dev', dev.task);
+gulp.task('dev', dev.task)};
