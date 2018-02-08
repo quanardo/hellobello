@@ -114,7 +114,7 @@ var buildSite = (cb, options) => {
 //       cb('Hugo build failed');
 //     }
 //   });
-// }
+}
 
 var deployToNetlify = (cb, options) => {
   // const args = options ? netlifyArgs.concat(options) : netlifyArgs;
@@ -275,4 +275,4 @@ gulp.task('server', ['hugo-preview'], () => {
   });
 });
 // Task to set environment to development
-gulp.task('dev', dev.task)};
+gulp.task('dev', dev.task);
