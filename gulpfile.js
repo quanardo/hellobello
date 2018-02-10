@@ -136,6 +136,11 @@ var deployToNetlify = (cb, options) => {
   });
 }
 
+
+gulp.task('netlify-cms', () => {
+  return gulp.src(['./src/admin/**'])
+  .pipe(gulp.dest('./site/static/admin'));
+});
 // Hugo build tasks
 gulp.task('hugo', ['assets'], (cb) => buildSite(cb));
 gulp.task('hugo-preview', gTasks.sync(['dev', 'assets']), (cb) => buildSite(cb, ['--buildDrafts', '--buildFuture']));
@@ -152,7 +157,7 @@ gulp.task('assets', gTasks.sync(['styles', 'scripts']));
 // Some task aliasing
 gulp.task('build', ['hugo']);
 gulp.task('build-preview', ['hugo-preview']);
-gulp.task('release', gTasks.sync(['hugo-prod', 'html']));
+gulp.task('release', gTasks.sync(['hugo-prod', 'html', 'netlify-cms']));
 
 gulp.task('deploy', ['release']);
 // Simple task to revision and copy site images to destination directory
