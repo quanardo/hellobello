@@ -11,6 +11,10 @@ googleAnalytics = "UA-106758542-1"
 paginate = 4
 footnotereturnlinkcontents = "↩"
 
+backend:
+  name: github
+  repo: quanardo/hellobello
+
 [Taxonomies]
     tag = "tags"
     category = "categories"
