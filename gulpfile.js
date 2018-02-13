@@ -139,7 +139,7 @@ var deployToNetlify = (cb, options) => {
 
 gulp.task('netlify-cms', () => {
   return gulp.src(['./src/admin/**'])
-  .pipe(gulp.dest('dist/admin'));
+  .pipe(gulp.dest('./site/static/admin'));
 });
 // Hugo build tasks
 gulp.task('hugo', ['assets'], (cb) => buildSite(cb));
