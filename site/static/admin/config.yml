@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: master
   publish_mode: editorial_workflow
-  media_folder: "img"
+  media_folder: "img/uploads"
   public_folder: "img"
 
   collections: # A list of collections the CMS should be able to edit
