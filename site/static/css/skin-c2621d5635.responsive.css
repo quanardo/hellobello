@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+@media (max-width:1439px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+
+  .isotope_item_masonry .post_title {
+    font-size: 1.3em;
+  }
+
+  .sc_button,
+  button,
+  input[type=button],
+  input[type=reset],
+  input[type=submit] {
+    font-size: 10.2px;
+  }
+
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=tel],
+  input[type=text],
+  select,
+  textarea {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:1135px) {
+  h1 {
+    font-size: 2.6em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.54em;
+  }
+
+  h4 {
+    font-size: 1.385em;
+  }
+
+  h5 {
+    font-size: 1.077em;
+  }
+
+  h6 {
+    font-size: 1.077em;
+  }
+
+  .sc_item_title {
+    font-size: 2.6em;
+  }
+
+  .sc_dropcaps .sc_dropcaps_item {
+    font-size: 3.32em;
+  }
+
+  .sc_dropcaps.sc_dropcaps_style_1 .sc_dropcaps_item {
+    font-size: 4.149em;
+  }
+
+  .sc_dropcaps.sc_dropcaps_style_4 .sc_dropcaps_item {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width:479px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.54em;
+  }
+
+  h4 {
+    font-size: 1.385em;
+  }
+
+  h5 {
+    font-size: 1.077em;
+  }
+
+  h6 {
+    font-size: 1.077em;
+  }
+
+  .sc_item_title {
+    font-size: 2.2em;
+  }
+}

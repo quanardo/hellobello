@@ -2,4 +2,3 @@ site/public/*
 node_modules/*
 bower_components/*
 dist/*
-site/static/*
