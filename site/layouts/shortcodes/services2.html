@@ -1,0 +1,40 @@
+
+<div class="sc_row row sc_row-fluid">
+        <div class="column sc_column_container sc_col-sm-12">
+            <div class="sc_column-inner ">
+                <div class="wrapper">
+                    <div class="sc_empty_space em_height_7-5">
+                        <span class="sc_empty_space_inner"></span>
+                    </div>
+                    {{ $paginator := (where .Site.Pages "Section" "in" "services") }}
+                    {{ range after 2 $paginator }}
+                        {{ $img := string .Params.img }}
+                        {{ $title := .Params.title }}
+                        {{ $category := .Params.category }}
+                        {{ $descr := .Params.descr }}
+                            <div class="sc_section sc_section_block aligncenter max_width cu_width-1100">
+                                <div class="sc_section_inner">
+                                    <div class="sc_section_content_wrap">
+                                        <div id="sc_call_to_action_032" class="sc_call_to_action sc_call_to_action_style_1 sc_call_to_action_align_left">
+                                            <div class="columns_wrap">
+                                                <div class="sc_call_to_action_featured column-1_2">
+                                                    <img alt="1170x700.jpg" src="/img/{{ with $.Site.Data.assets }}{{ index . $img }}{{ end }}">
+                                                </div>
+                                                <div class="sc_call_to_action_info column-1_2">
+                                                    <h6 class="sc_call_to_action_subtitle sc_item_subtitle">{{ humanize $category }}</h6>
+                                                    <h2 class="sc_call_to_action_title sc_item_title"><a href="{{ .RelPermalink }}">{{ $title }}</a></h2>
+                                                    <div class="sc_call_to_action_descr sc_item_descr">{{ $descr }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sc_empty_space em_height_7-5">
+                                <span class="sc_empty_space_inner"></span>
+                            </div>
+                    {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

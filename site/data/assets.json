@@ -104,6 +104,7 @@
   "WooCommerce.svg": "WooCommerce-01b14c7a73.svg",
   "WooCommerce.ttf": "WooCommerce-88d94391c7.ttf",
   "WooCommerce.woff": "WooCommerce-a675793d69.woff",
+  "acupuncture.jpg": "acupuncture-bbff617c4f.jpg",
   "admin_icon.min.css": "admin_icon-e07598036e.min.css",
   "android-icon-144x144.png": "android-icon-144x144-480e41863a.png",
   "android-icon-192x192.png": "android-icon-192x192-78640da25e.png",
@@ -122,6 +123,7 @@
   "apple-icon-76x76.png": "apple-icon-76x76-fe4155db66.png",
   "apple-icon-precomposed.png": "apple-icon-precomposed-e828117369.png",
   "apple-icon.png": "apple-icon-e828117369.png",
+  "auriculotherapy.jpg": "auriculotherapy-ab0e66ac2b.jpg",
   "core.animation.css": "core-74d668c19a.animation.css",
   "core.messages.css": "core-52f4e0c2ba.messages.css",
   "custom-style.css": "custom-style-1df3099e2b.css",
@@ -140,6 +142,7 @@
   "esgbox_loading.gif": "esgbox_loading-e14dca13d1.gif",
   "esgbox_overlay.png": "esgbox_overlay-a6cb983e06.png",
   "esgbox_sprite.png": "esgbox_sprite-783d4031fe.png",
+  "face.jpg": "face-1e95a8ebb4.jpg",
   "facebook.png": "facebook-b983b7d140.png",
   "favicon-16x16.png": "favicon-16x16-470e47dfdd.png",
   "favicon-32x32.png": "favicon-32x32-7f0f00bde1.png",
@@ -158,6 +161,7 @@
   "fontello/css/fontello.css": "fontello/css/fontello-3a3db595ed.css",
   "google.png": "google-2c7c064171.png",
   "google_white5.png": "google_white5-3cfd8e5f5f.png",
+  "head.jpg": "head-773225c249.jpg",
   "icon-day-hover.png": "icon-day-hover-6244426a39.png",
   "icon-list-hover.png": "icon-list-hover-9d8c0f0b0f.png",
   "icon-month-hover.png": "icon-month-hover-5f0ff5ce61.png",
@@ -258,5 +262,7 @@
   "vendor/woo/single-product.min.js": "vendor/woo/single-product-8c3f2fc173.min.js",
   "vendor/woo/woocommerce-add-to-cart.js": "vendor/woo/woocommerce-add-to-cart-adf3ced4ee.js",
   "vendor/woo/woocommerce.min.js": "vendor/woo/woocommerce-f611aaeb28.min.js",
-  "w3463.jpg": "w3463-3437141859.jpg"
+  "w3463.jpg": "w3463-3437141859.jpg",
+  "weight.jpg": "weight-c7b4cb099a.jpg",
+  "yinyang.jpg": "yinyang-58e35120b3.jpg"
 }
