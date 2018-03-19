@@ -24,15 +24,7 @@
 <script type='text/javascript' src="/js/{{ index . "vendor/grid.layout/grid.layout.min.js" }}"></script>
 <script type='text/javascript' src="/js/{{ index . "vendor/swiper/swiper.js" }}"></script>
 <script type='text/javascript' src="/js/{{ index . "vendor/isotope/isotope.min.js" }}"></script>
+<script type='text/javascript' src="/js/{{ index . "vendor/jquery/core.min.js" }}"></script>
+<script type='text/javascript' src='https://maps.google.com/maps/api/js?key=AIzaSyAvndZocz90K5PKM92YQ7Cb-MvTIGko8vI'></script>
+<script type='text/javascript' src="/js/{{ index . "vendor/core.googlemap.js" }}"></script>
 {{ end }}
-<script>
-    if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-            if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
-                });
-            }
-        });
-    }
-</script>

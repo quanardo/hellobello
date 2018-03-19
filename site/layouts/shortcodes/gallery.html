@@ -1,0 +1,63 @@
+<!--
+Put this file in /layouts/shortcodes/gallery.html
+Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
+-->
+<!-- count how many times we've called this shortcode; load the css if it's the first time -->
+{{ $baseURL := .Site.BaseURL }}
+<div data-sc-full-width="true" data-sc-full-width-init="false" data-sc-stretch-content="true" class="sc_row row sc_row-fluid sc_row-no-padding">
+    <div class="column sc_column_container sc_col-sm-12">
+        <div class="sc_column-inner ">
+            <div class="wrapper">
+                <article class="myportfolio-container minimal-light" id="esg-grid-2-1-wrap">
+                    <div id="esg-grid-2-1" class="esg-grid">
+                        <ul>
+                            {{- with (.Get "dir") -}}
+                            <!-- If a directory was specified, generate figures for all of the images in the directory -->
+                            {{- $files := readDir (print "static" .) }} 
+                            {{- range $index, $element := $files -}}
+                            <!-- skip files that aren't images, or that inlcude the thumb suffix in their name -->
+                            <!-- {{- $thumbext := $.Get "thumb" | default "-thumb" }}  -->
+                            <!-- {{- $isthumb := .Name | findRE ($thumbext | printf "%s\\.") }} -->
+                            <!-- is the current file a thumbnail image? -->
+                            <!-- {{- $isimg := lower .Name | findRE "\\.(gif|jpg|jpeg|tiff|png|bmp)" }} -->
+                            <!-- is the current file an image? -->
+                            {{- $caption := .Name | replaceRE "\\..*" "" | humanize }}
+                            <!-- humanized filename without extension -->
+                            {{- $linkURL := print $baseURL ($.Get "dir") .Name }}
+                            <!-- absolute URL to hi-res image -->
+                            <!-- {{- $thumb := .Name | replaceRE "(\\.)" ($thumbext | printf "%s.") }} -->
+                            <!-- filename of thumbnail image -->
+                            <!-- {{- $thumbexists := where $files "Name" $thumb }} -->
+                            <!-- does a thumbnail image exist? -->
+                            <!-- {{- $thumbURL := print $baseURL ($.Get "dir") "/" $thumb | absURL }} -->
+                            <!-- absolute URL to thumbnail image -->
+                            <li class="filterall filter-blogger eg-roosevelt-massage-wrapper eg-post-id-{{$index}}" data-date="1459254645">
+                                <div class="esg-media-cover-wrapper">
+                                    <div class="esg-entry-media esg-shifttotop" data-delay="0">
+                                        <img itemprop="thumbnail" src="{{ $linkURL }}" alt="{{ $caption }}" />
+                                    </div>
+                                    <div class="esg-entry-cover">
+                                        <div class="esg-overlay esg-fade eg-roosevelt-massage-container" data-delay="0"></div>
+                                        <div class="esg-bottom eg-post-{{$index}} eg-roosevelt-massage-element-0 esg-flipup" data-delay="0.09">Здесь будет описание</div>
+                                        <div class="esg-center eg-post-{{$index}} eg-roosevelt-massage-element-2-a esg-slideup" data-delay="0.2">
+                                            <a class="eg-roosevelt-massage-element-2 eg-post-{{$index}} esgbox" href="{{ $linkURL }}">
+                                                <i class="eg-icon-search"></i>
+                                            </a>
+                                        </div>
+                                        <div class="esg-bottom eg-post-{{$index}} eg-roosevelt-massage-element-4-a esg-flipdown" data-delay="0.46">
+                                            <a class="eg-roosevelt-massage-element-4 eg-post-{{$index}}" href="#" title="View all posts in Blogger" rel="category tag">А тут категория</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {{- end }} 
+                            {{- end }}
+                        </ul>
+                    </div>
+                </article>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sc_row-full-width"></div>

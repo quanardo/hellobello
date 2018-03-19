@@ -1,9 +1,12 @@
-{{ $title := .Get "title" }}
-{{ $img := .Get "src" }}
-<div class="page_content_wrap page_paddings_yes">
+{{ $title := .Get "title" }} 
+{{ $img := .Get "src" }} 
+{{ $style := .Get "padding" }}
+{{ $video := .Get "video" }}
+<div class="page_content_wrap page_paddings_yes" {{ if $style }}style="padding-bottom:{{$style}}" {{ end }}>
     <div class="content_wrap">
         <div class="content">
             <article class="post post_item_single">
+                {{ if $img }}
                 <section class="post_featured">
                     <div class="post_thumb" data-image="/img/370x370.jpg" data-title="{{ $title }}">
                         <a class="hover_icon hover_icon_view" href="/img/370x370.jpg" title="{{ $title }}">
@@ -11,55 +14,25 @@
                         </a>
                     </div>
                 </section>
-                <section class="post_content">
-                    <h1 class="post_title entry-title">
-                        <span class="post_icon icon-book-open"></span> {{ $title }}
-                    </h1>
-                    <!-- <div class="post_info">
-                        <span class="post_info_item post_info_posted">
-                            <a href="single-post.html" class="post_info_date date updated" content="2016-03-29 11:54:22">March 29, 2016</a>
-                        </span> -->
-                        <!-- <span class="post_info_item post_info_posted_by vcard">Posted by
-                            <a href="single-post.html" class="post_info_author">Kate Green</a>
-                        </span>
-                        <span class="post_info_item post_info_tags">in
-                            <a class="category_link" href="#">Classic</a>,
-                            <a class="category_link" href="#">Masonry 2 columns</a>,
-                            <a class="category_link" href="#">Masonry 3 columns</a>,
-                            <a class="category_link" href="#">Portfolio 2 columns</a>,
-                            <a class="category_link" href="#">Portfolio 3 columns</a>
-                        </span>
-                        <span class="post_info_item post_info_counters">
-                            <span class="post_counters_item post_counters_views icon-eye" title="Views - 775">
-                                <span class="post_counters_number">775</span>
-                        </span>
-                        </span>
-                    </div> -->
-                    {{ .Inner }}
-                    <!-- <div class="post_info post_info_bottom">
-                        <span class="post_info_item post_info_tags">Tags:
-                            <a class="post_tag_link" href="single-post.html">Hot stone massage</a>
-                        </span>
+                {{ end }}
+                {{ if $video }}
+                <section class="post_featured">
+                    <div class="sc_video_player">
+                        <div class="sc_video_frame" data-width="100%" data-height="659">
+                            <iframe class="video_frame" src="{{ $video }}" width="100%" height="659" frameborder="0" webkitAllowFullScreen="webkitAllowFullScreen"
+                                mozallowfullscreen="mozallowfullscreen" allowFullScreen="allowFullScreen"></iframe>
+                        </div>
                     </div>
                 </section>
-                <section class="post_author author vcard">
-                    <div class="post_author_avatar">
-                        <a href="single-post.html">
-                            <img alt='' src='http://2.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61?s=75&#038;d=mm&#038;r=g' class='avatar avatar-75 photo' height='75' width='75' />
-                        </a>
-                    </div>
-                    <h5 class="post_author_title">About
-                        <span>
-                            <a href="single-post.html" class="fn">Kate Green</a>
-                        </span>
-                    </h5>
-                    <div class="post_author_info">
-                        Lorem ipsum dolor sit amet, eius quando timeam cu vim, ea mel summo gubergren intellegebat. Duo facer offendit dissentiunt
-                        et. An vis oratio liberavisse, vim ex eros dicat. Usu enim virtute pertinax ad. Ne sonet ponderum
-                        est, te agam choro accusam est. Oporteat urbanitas reprehendunt sit eu. An qui omnesque similique,
-                        ius movet volutpat liberavisse at, per interesset persequeris ad.
-                    </div>
-                </section> -->
+                {{ end }}
+                {{ if .Inner }}
+                <section class="post_content services_post_content">
+                    <h1 class="post_title entry-title">
+                        {{ $title }}
+                    </h1>
+                    {{ .Inner }}
+                </section>
+                {{ end }}
             </article>
         </div>
     </div>

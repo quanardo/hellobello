@@ -164,6 +164,9 @@
     .body_style_boxed .page_wrap {
         width: 970px;
     }
+    .footer_wrap .logo {
+        font-size: .8em !important;
+    }
     .slider_boxed,
     .content_wrap,
     .content_container {
@@ -284,6 +287,14 @@
 	}
 }
 @media (min-width: 960px) and (max-width: 1023px) {
+    .header_mobile .logo_main {
+        height: 46px;
+        padding: 3px 0;
+        float: right;
+    }
+    .footer_wrap .logo {
+        font-size: .8em !important;
+    }
     .body_style_boxed .page_wrap {
         width: 100%;
     }
@@ -902,6 +913,11 @@
     }
 }
 @media (min-width: 640px) and (max-width: 959px) {
+    .header_mobile .logo_main {
+        height: 46px;
+        padding: 3px 0;
+        float: right;
+    }
     .sc_team_style_team-3 [class*="column-"] .sc_team_item,
     [class*="column-"] .sc_skills_counter {
         max-width: 250px;
@@ -1607,6 +1623,11 @@
     }
 }
 @media (min-width: 480px) and (max-width: 639px) {
+    .header_mobile .logo_main {
+        height: 46px;
+        padding: 3px 0;
+        float: right;
+    }
     .slider_boxed,
     .content_wrap,
     .content_container {
@@ -1715,6 +1736,9 @@
 @media (max-width: 1439px) {
     .menu_main_nav>li {
         margin-right: 1.5em;
+    }
+    .footer_wrap .logo {
+        font-size: .9em;
     }
     .isotope_item_portfolio.isotope_column_2 .post_descr {
         display: none;
@@ -2251,7 +2275,7 @@
     }
     .row:not(.columns_fluid)>[class*="column-"],
     .columns_wrap:not(.columns_fluid)>[class*="column-"] {
-        width: 100%;
+        width: 100% !important;
     }
     .row.columns_fluid>[class*="column-"],
     .columns_wrap.columns_fluid>[class*="column-"] {
@@ -3048,11 +3072,12 @@
         text-align: left;
     }
     .header_mobile .logo {
-        padding-top: 24px;
+        padding-top: 12px;
         padding-bottom: 5px;
     }
     .header_mobile .logo_main {
         height: 46px;
+        float: left;
         padding: 3px 0;
     }
     .header_mobile .menu_main_cart {
@@ -3060,11 +3085,11 @@
     }
     .header_mobile .menu_button {
         left: auto;
-        right: 50px;
+        right: 30px;
     }
     .header_mobile .side_wrap {
         width: 100%;
-        top: 97px;
+        top: 78px;
         left: -100%;
     }
     .admin-bar .header_mobile .side_wrap {

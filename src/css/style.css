@@ -722,7 +722,7 @@ label.required:after {
 .column-10_10,
 .column-11_11,
 .column-12_12 {
-    width: 100%;
+    width: 100% !important;
 }
 .column-1_2,
 .column-2_4,
@@ -730,55 +730,55 @@ label.required:after {
 .column-4_8,
 .column-5_10,
 .column-6_12 {
-    width: 50%;
+    width: 50% !important;
 	margin-right: -2px;
 }
 .column-1_3,
 .column-2_6,
 .column-3_9,
 .column-4_12 {
-    width: 33.33333333%;
+    width: 33.33333333% !important;
 	margin-right: -3px;
 }
 .column-2_3,
 .column-4_6,
 .column-8_12 {
-    width: 66.66666667%;
+    width: 66.66666667% !important;
 }
 .column-1_4,
 .column-2_8,
 .column-3_12 {
-    width: 25%;
+    width: 25% !important;
 	margin-right: -4px;
 }
 .column-3_4,
 .column-6_8,
 .column-9_12 {
-    width: 75%;
+    width: 75% !important;
 }
 .column-1_5,
 .column-2_10 {
-    width: 20%;
+    width: 20% !important;
 }
 .column-2_5,
 .column-4_10 {
-    width: 40%;
+    width: 40% !important;
 }
 .column-3_5,
 .column-6_10 {
-    width: 60%;
+    width: 60% !important;
 }
 .column-4_5,
 .column-8_10 {
-    width: 80%;
+    width: 80% !important;
 }
 .column-1_6,
 .column-2_12 {
-    width: 16.66666667%;
+    width: 16.66666667% !important;
 }
 .column-5_6,
 .column-10_12 {
-    width: 83.33333333%;
+    width: 83.33333333% !important;
 }
 .column-1_7 {
     width: 14.28571429%;
@@ -1948,7 +1948,7 @@ body:not(.top_panel_fixed) .top_panel_position_over .top_panel_bottom {
     border: 1px solid #ddd;
 }
 .menu_main_nav>li ul {
-    width: 180px;
+    width: fit-content;
     box-sizing: border-box;
     padding: 0;
 }
@@ -2536,8 +2536,8 @@ form.search_form .search_button:hover {
     width: 100%;
 }
 .widget_area .post_item .post_title {
-    font-size: 1em;
-    margin-bottom: 0.2em;
+    font-size: 1.1em;
+    margin-bottom: 0.6em;
 }
 .widget_area .post_item .post_info {
     margin-bottom: 0;
@@ -2784,7 +2784,7 @@ form.search_form .search_button:hover {
     text-align: center;
 }
 .header_mobile .logo {
-    padding-top: 35px;
+    padding-top: 28px;
     padding-bottom: 20px;
 }
 .header_mobile .logo_main {}.header_mobile .menu_button {
@@ -2919,7 +2919,7 @@ form.search_form .search_button:hover {
     padding-right: 54px;
     display: block;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 16px;
     text-transform: uppercase;
 }
@@ -6543,7 +6543,7 @@ body .body_wrap table.booked-calendar tr.days th,
 .esg-grid .esg-filters .esg-sortbutton,
 .esg-grid .esg-filters .esg-cartbutton a,
 .woocommerce ul.products li.product a.added_to_cart {
-    font-family: Raleway;
+    /* font-family: Raleway; */
 }
 .mejs-container * {
     font-family: Raleway!important;

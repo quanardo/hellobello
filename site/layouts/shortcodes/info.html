@@ -4,7 +4,44 @@
             <div class="wrapper">
                 <div id="sc_blogger_933" class="sc_blogger layout_portfolio_3 template_portfolio sc_blogger_horizontal">
                     <div class="isotope_wrap" data-columns="3">
-                        {{ .Inner }}
+                        {{ $paginator := where ( where .Site.Pages "Section" "in" "services") ".Params.hidden" "!=" true }}
+                        {{ range first 3 $paginator }}
+                            {{ $img := string .Params.img }}
+                            {{ $title := .Params.title }}
+                            {{ $category := .Params.category }}
+                            {{ $descr := .Params.descr }}
+                            <div class="isotope_item isotope_item_portfolio isotope_item_portfolio_3 isotope_column_3">
+                                    <div class="post_item post_item_portfolio post_item_portfolio_3">
+                                        <div class="post_content isotope_item_content ih-item colored">
+                                            <div class="post_featured img">
+                                                <a href="{{ .RelPermalink }}">
+                                                    <img alt="" src="/img/{{ with $.Site.Data.assets }}{{ index . $img }}{{ end }}">
+                                                </a>
+                                            </div>
+                                            <div class="post_info_wrap info">
+                                                <div class="info-back">
+                                                    <!-- <div class="post_category">
+                                                        <a href="{{ .RelPermalink }}" rel="tag">{{ $category }}</a>
+                                                    </div> -->
+                                                    <h4 class="post_title">
+                                                        <a href="{{ .RelPermalink }}">{{ $title }}</a>
+                                                    </h4>
+                                                    <div class="post_descr">
+                                                        <!-- <p>
+                                                            <a href="{{ .RelPermalink }}">
+                                                                {{ $descr }}
+                                                            </a>
+                                                        </p> -->
+                                                        <p class="post_buttons">
+                                                            <a href="{{ .RelPermalink }}" class="post_readmore sc_button sc_button_size_large sc_button_style_filled">Узнать больше</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        {{ end }}
                     </div>
                 </div>
             </div>

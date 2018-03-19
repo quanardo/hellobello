@@ -1,0 +1,23 @@
+<nav class="menu_main_nav_area">
+    <ul class="menu_main_nav">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+            <li class="menu-item {{ if ($currentPage.IsMenuCurrent "main" . ) }} current-menu-ancestor current-menu-parent {{ end }} menu-item-has-children">
+                <a>{{ .Name }}</a>
+                <ul class="sub-menu">
+                    {{ range .Children }}
+                    <li class="menu-item {{ if ($currentPage.IsMenuCurrent "main" . ) }} current-menu-ancestor current-menu-parent {{ end }}">
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </li>
+            {{ else }}
+            <li class="menu-item {{ if ($currentPage.IsMenuCurrent "main" . ) }} current-menu-ancestor {{ end }}">
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</nav>

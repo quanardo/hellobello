@@ -1,0 +1,62 @@
+<div class="page_content_wrap page_paddings_yes">
+    <div class="content_wrap">
+        <div class="content">
+            <article class="post_item post_item_single page">
+                <section class="post_content">
+                    <div class="sc_row row sc_row-fluid">
+                        <div class="column sc_column_container sc_col-sm-12">
+                            <div class="sc_column-inner ">
+                                <div class="wrapper">
+                                    <article class="myportfolio-container minimal-light" id="esg-grid-6-1-wrap">
+                                        <div id="esg-grid-6-1" class="esg-grid">
+                                            <div class="esg-clear-no-height"></div>
+                                            <ul class="mainul">
+                                                    {{- with (.Get "dir") -}}
+                                                    {{- $files := readDir (print "static" .) }} 
+                                                    {{- range first 76 $files -}}
+                                                    {{- $caption := .Name | replaceRE "\\..*" "" | humanize }}
+                                                    {{- $linkURL := print ($.Get "dir") .Name | relURL}}
+
+                                                    {{- $thumbURL := print ($.Get "thumbDir") .Name | relURL }}<!-- absolute URL to thumbnail image -->
+                                                <li id="eg-12-post-id-1" class="filterall eg-roosevelt-massage-wrapper eg-post-id-1"
+                                                    data-date="1459262251" data-cobblesw="1" data-cobblesh="1">
+                                                    <div class="esg-media-cover-wrapper">
+                                                        <div class="esg-entry-media esg-shifttotop" data-delay="0">
+                                                            <img src="{{ $linkURL }}" alt="{{ $caption }}">
+                                                        </div>
+                                                        <div class="esg-entry-cover">
+                                                            <div class="esg-overlay esg-fade eg-roosevelt-massage-container" data-delay="0"></div>
+                                                            <div class="esg-bottom eg-post-434 eg-roosevelt-massage-element-0 esg-flipup" data-delay="0.09">Тут Заголовок</div>
+                                                            <div class="esg-center eg-post-434 eg-roosevelt-massage-element-2-a esg-slideup" data-delay="0.2">
+                                                                <a class="eg-roosevelt-massage-element-2 eg-post-434 esgbox" href="{{ $linkURL }}" lgtitle="{{ $caption}}">
+                                                                    <i class="eg-icon-search"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="esg-bottom eg-post-1 eg-roosevelt-massage-element-4-a esg-flipdown" data-delay="0.46">
+                                                                <!-- <a class="eg-roosevelt-massage-element-4 eg-post-1" href="#" title="View all posts in Gallery" rel="category tag">Gallery</a>, -->
+                                                                <a class="eg-roosevelt-massage-element-4 eg-post-434" href="#" title="View all posts in Swedish massage" rel="category tag">А здесь категория</a>
+                                                            </div>
+                                                            <!-- <div class="esg-center eg-post-1 eg-roosevelt-massage-element-1-a esg-slideup" data-delay="0.3">
+                                                                <a class="eg-roosevelt-massage-element-1 eg-post-1" href="single-post.html" target="_self">
+                                                                    <i class="eg-icon-link"></i>
+                                                                </a>
+                                                            </div> -->
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                {{- end }}
+                                                {{- end }}
+                                            </ul>
+                                        </div>
+                                    </article>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <section class="related_wrap related_wrap_empty"></section>
+        </div>
+    </div>
+</div>

@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 var path = require('path');
 var del = require('del');
-var hugoBin = require('hugo-bin');
+// var hugoBin = require('hugo-bin');
 // To parse arguments passed to gulp tasks
 var argv = require('yargs').argv;
 // To start hugo build from gulp task
@@ -34,7 +34,7 @@ gulp.paths.img = path.join(gulp.paths.dest, 'img');
 gulp.paths.font = path.join(gulp.paths.dest, 'fonts');
 
 // Hugo config
-// const hugoBin = './hugo/hugo.exe';
+const hugoBin = './hugo/hugo.exe';
 const defaultArgs = ['--destination', gulp.paths.dist, '-s', 'site', '-v'];
 // Netlify config
 const netlify = 'netlify';
@@ -167,8 +167,8 @@ gulp.task('images', ['json'], () => {
   return gulp.src([
     './src/img/**/*'
   ])
-    .pipe(gp.filter('**/*.{jpg,jpeg,svg,png,ico,gif}'))
-    .pipe(gp.flatten())
+    // .pipe(gp.filter('**/*.{jpg,jpeg,svg,png,ico,gif}'))
+    // .pipe(gp.flatten())
     .pipe(prod(gp.imagemin()))
     .pipe(gp.rev(manifestPath))
     .pipe(gulp.dest(gulp.paths.img))

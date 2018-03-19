@@ -38,6 +38,38 @@ footnotereturnlinkcontents = "↩"
     languageName = "Russian"
     languageCode = "ru"
 
+[Languages.ru.menu]
+    [[Languages.ru.menu.main]]
+        name = "Главная"
+        url = "/"
+        weight = 1
+    [[Languages.ru.menu.main]]
+        identifier = "info"
+        name = "Информация"
+        weight = 2
+    [[Languages.ru.menu.main]]
+        name = "О нас"
+        weight = 3
+        parent = "info"
+        url = "/about/"
+    [[Languages.ru.menu.main]]
+        name = "Борьба противоположностей"
+        weight = 4
+        url = "/opposite/"
+        parent = "info"
+    [[Languages.ru.menu.main]]
+        name = "Услуги"
+        weight = 5
+        url = "/services/"
+    [[Languages.ru.menu.main]]
+        name = "Галлерея"
+        url = "/gallery/"
+        weight = 6
+    [[Languages.ru.menu.main]]
+        name = "Контакты"
+        url = "/contacts/"
+        weight = 7
+
 [Languages.lv]
     title = "HELLO BELLO — Ķīnas veselības centrs."
     description = "Augstas klases speciālisti no Ķīnas, garantēta individuālā pieeja un komforts mūsu pacientiem. Adatu terapija, manuālā terapija, dažādu veidu masāžas, sildīšana ar vērmeļu cigāriem, fitoterapija."
@@ -54,7 +86,7 @@ footnotereturnlinkcontents = "↩"
     facebook        = "//facebook.com/hellobello.lv"
 #   twitter         = "#"
 #   googleplus      = "#"
-#   instagram       = "#"
+    instagram       = "//instagram.com/hello_bello_riga"
 #   gitlab          = "#"
 #   bitbucket       = "#"
 #   jsfiddle        = "#"
