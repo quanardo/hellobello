@@ -62,7 +62,7 @@ footnotereturnlinkcontents = "↩"
         weight = 5
         url = "/services/"
     [[Languages.ru.menu.main]]
-        name = "Галлерея"
+        name = "Галерея"
         url = "/gallery/"
         weight = 6
     [[Languages.ru.menu.main]]

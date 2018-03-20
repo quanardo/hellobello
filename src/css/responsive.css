@@ -3067,6 +3067,9 @@
     .header_mobile .mask {
         display: none!important;
     }
+    .footer_wrap .logo {
+        font-size: 1.2em !important;
+    }
     .header_mobile .content_wrap {
         margin-left: 10px;
         text-align: left;

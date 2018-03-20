@@ -1120,3 +1120,7 @@ body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button {
 .shortcodespg .sc_slider_swiper {
 	width:100%;
 }
+
+.header_mobile, .top_panel_wrap {
+	display: none;
+}

@@ -1304,3 +1304,8 @@ body table.booked-calendar input[type=submit].button-primary {
 .single-team .swiper-slide {
   width: 100%;
 }
+
+.header_mobile,
+.top_panel_wrap {
+  display: none;
+}

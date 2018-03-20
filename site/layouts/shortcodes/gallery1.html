@@ -13,7 +13,7 @@
                                             <ul class="mainul">
                                                     {{- with (.Get "dir") -}}
                                                     {{- $files := readDir (print "static" .) }} 
-                                                    {{- range first 76 $files -}}
+                                                    {{- range first 67 $files -}}
                                                     {{- $caption := .Name | replaceRE "\\..*" "" | humanize }}
                                                     {{- $linkURL := print ($.Get "dir") .Name | relURL}}
 

@@ -35,27 +35,27 @@
                 </div>
             </header>
             <div class="header_mobile">
-                    <div class="content_wrap">
-                        <div class="menu_button icon-menu"></div>
-                        <div class="logo" style="display:flex;">
-                            <a href="/" style="width:100%;">
-                                <img src="/img/{{ with $.Site.Data.assets }}{{ index . "logohb.png" }}{{ end }}" class="logo_main" alt="" width="238" height="56">
-                                <div class="logo-naming logo_main" style="font-size:.6em;margin-top:.5em;">
-                                    <p class="logo-big">Hello Bello</p>
-                                    <p>Китайский оздоровительный центр</p>
-                                </div>
-                            </a>
-                        </div>
+                <div class="content_wrap">
+                    <div class="menu_button icon-menu"></div>
+                    <div class="logo" style="display:flex;">
+                        <a href="/" style="width:100%;">
+                            <img src="/img/{{ with $.Site.Data.assets }}{{ index . "logohb.png" }}{{ end }}" class="logo_main" alt="" width="238" height="56">
+                            <div class="logo-naming logo_main" style="font-size:.6em;margin-top:.5em;">
+                                <p class="logo-big">Hello Bello</p>
+                                <p>Китайский оздоровительный центр</p>
+                            </div>
+                        </a>
                     </div>
-                    <div class="side_wrap">
-                        <div class="close">Close</div>
-                        <div class="panel_top">
-                            {{ partial "layout/nav.html" . }}
-                        </div>
-                        <div class="panel_bottom"></div>
-                    </div>
-                    <div class="mask"></div>
                 </div>
+                <div class="side_wrap">
+                    <div class="close">Close</div>
+                    <div class="panel_top">
+                        {{ partial "layout/nav.html" . }}
+                    </div>
+                    <div class="panel_bottom"></div>
+                </div>
+                <div class="mask"></div>
+            </div>
             {{ end }} 
             {{ define "content" }}
             <section class="slider_wrap slider_fullscreen slider_engine_revo slider_alias_home-2">
@@ -71,24 +71,24 @@
                                     data-no-retina>
                                     <div class="tp-caption black tp-resizeme" id="slide-7-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                                     data-y="['middle','middle','middle','middle']" data-voffset="['-27','-27','-144','-84']"
-                                    data-fontsize="['48','48','55','55']" data-width="465" data-height="91" data-whitespace="normal"
+                                    data-fontsize="['48','48','36','36']" data-width="auto" data-height="91" data-whitespace="nowrap"
                                     data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power3.easeInOut;"
                                     data-transform_out="auto:auto;s:1000;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
                                     data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on">Добро пожаловать в</div>
                                 <div class="tp-caption black tp-resizeme" id="slide-7-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                    data-y="['middle','middle','middle','middle']" data-voffset="['35','35','-65','14']" data-fontsize="['68','68','60','55']"
+                                    data-y="['middle','middle','middle','middle']" data-voffset="['35','35','-65','-10']" data-fontsize="['68','68','68','68']"
                                     data-lineheight="['68','68','60','55']" data-width="['none','none','none','600']" data-height="none"
                                     data-whitespace="['nowrap','nowrap','nowrap','normal']" data-transform_idle="o:1;" data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:2500;e:Power3.easeInOut;"
                                     data-transform_out="auto:auto;s:1000;" data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-mask_out="x:0;y:0;s:inherit;e:inherit;"
                                     data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on">Hello Bello</div>
-                                <div class="tp-caption black tp-resizeme" id="slide-7-layer-3" data-x="['center','center','center','center']" data-hoffset="['2','2','0','0']"
-                                    data-y="['middle','middle','middle','middle']" data-voffset="['112','112','12','129']" data-fontsize="['21','21','24','24']"
-                                    data-lineheight="['30','30','30','25']" data-width="['1000','1000','800','500']" data-height="noen"
+                                <div class="tp-caption black tp-resizeme" id="slide-7-layer-3" data-x="['center','center','center','center']" data-hoffset="['2','2','2','2']"
+                                    data-y="['middle','middle','middle','middle']" data-voffset="['112','112','12','129']" data-fontsize="['24','24','28','28']"
+                                    data-lineheight="['30','30','30','30']" data-width="['1000','1000','800','500']" data-height="none"
                                     data-whitespace="['normal','normal','normal','normal']" data-transform_idle="o:1;" data-transform_in="y:50px;opacity:0;s:2500;e:Power3.easeInOut;"
                                     data-transform_out="auto:auto;s:1000;" data-start="1000" data-splitin="none" data-splitout="none"
                                     data-responsive_offset="on">Современный целительский центр, сохраняющий традиции Востока и располагающий всем необходимым для консультации и комплексного оздоровления</div>
                                 <div class="tp-caption black tp-resizeme" id="slide-7-layer-4" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                                    data-y="['middle','middle','middle','middle']" data-voffset="['192','192','102','223']" data-fontsize="['11','11','18','15']"
+                                    data-y="['middle','middle','middle','middle']" data-voffset="['192','192','102','280']" data-fontsize="['11','11','18','15']"
                                     data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;"
                                     data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Linear.easeNone;" data-style_hover="c:rgba(96, 47, 144, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);"
                                     data-transform_in="y:50px;opacity:0;s:3000;e:Power3.easeInOut;" data-transform_out="auto:auto;s:1000;"

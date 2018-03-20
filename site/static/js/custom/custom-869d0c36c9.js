@@ -1364,7 +1364,7 @@ function initEssGrid() {
 		var cwidth = container.width(),
 			ar = "1:1",
 			gbfc = eggbfc(jQuery(window).width(), "id"),
-			row = 26;
+			row = 23;
 		ar = ar.split(":");
 		aratio = parseInt(ar[0], 0) / parseInt(ar[1], 0);
 		coh = cwidth / aratio;
@@ -1382,7 +1382,7 @@ function initEssGrid() {
 			layout: "cobbles",
 			forceFullWidth: "off",
 			lazyLoad: "off",
-			row: 26,
+			row: 23,
 			loadMoreAjaxToken: "8d6a7d5c1e",
 			loadMoreAjaxUrl: "http://jacqueline.themerex.net/wp-admin/admin-ajax.php",
 			loadMoreAjaxAction: "Essential_Grid_Front_request_ajax",
@@ -1523,4 +1523,10 @@ $(".netlifyForm").submit(function (e) {
 			jQuery(this).val('');
 		});
 	});
+});
+
+$(function() {
+	if (jQuery(window).width() > 1024) {
+		$('.top_panel_wrap').css({'display': 'block'});
+	}
 });
